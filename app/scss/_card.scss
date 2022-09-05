@@ -1,0 +1,86 @@
+.container {
+  background-color: $DarkCyan;
+  min-height: 100vh;
+  background-image: url("/images/bg-pattern-top.svg"),
+    url("/images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 44vw bottom 34vh, left 37vw top 43vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include sm {
+    background-position: right 52vw bottom 31vh, left 48vw top 56vh;
+  }
+
+  .card {
+    background-color: white;
+    text-align: center;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .image {
+      background-image: url("/images/bg-pattern-card.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 20.4rem;
+      height: 8.75rem;
+
+      @include md {
+        width: 21.9rem;
+      }
+    }
+
+    .photo {
+      border-radius: 4rem;
+      border: 5px solid white;
+      margin-top: -16%;
+
+      @include md {
+        margin-top: -15%;
+      }
+    }
+    .name {
+      color: $VeryDarkDesaturatedBlue;
+      font-size: $font-p;
+      font-weight: 700;
+      margin-top: 0.9rem;
+      .age {
+        font-weight: 400;
+      }
+    }
+
+    .city {
+      font-size: 0.875rem;
+      color: $DarkGrayishBlue;
+      margin-top: 0.5rem;
+    }
+
+    hr {
+      margin-top: 1.38rem;
+      border-top: hsl(0deg 0% 91%);
+      @include md {
+        margin-top: 1.4rem;
+      }
+    }
+    .stats {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      margin: 1.5rem 2rem 1.5rem 1.28rem;
+      .numbers {
+        color: $VeryDarkDesaturatedBlue;
+        font-size: $font-p;
+        font-weight: 700;
+      }
+      .name-stats {
+        font-size: 11px;
+        color: $DarkGrayishBlue;
+        letter-spacing: 1px;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+}
